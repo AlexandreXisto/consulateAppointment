@@ -4,13 +4,13 @@ document.write(date3);
     function verificar() {
     var confirmar = window.document.getElementById('nacionalidade')
     var res = window.document.querySelector('div#res')
-    var valor = String(nacionalidade.value) //dados que forem inseridos no campo nacionalidade
+    var valor = String(nacionalidade.value) // tratar dados que forem inseridos no campo nacionalidade
 
       if (valor === 'Brasileiro' ) {
-        res.innerHTML = `<strong> Você é Brasileiro. </strong>`
+        res.innerHTML = `Você é Nativo(a) do país de origem`
       } else if (valor !== 'Brasileiro' && valor != ''){
-        res.innerHTML = `Você é ${valor}, portanto é Estrangeiro.`
-        res.style.color = "gray"
+        res.innerHTML = `Você é ${valor}, portanto é Estrangeiro(a).`
+        res.style.color = "yellow"
       } else if (valor === '') {
         res.innerHTML = `[ERROR] o campo está vazio!`
         res.style.color = "red"
@@ -19,6 +19,27 @@ document.write(date3);
 
     function confirmar() {
       var res = document.getElementById('agendado')
-      var valor = (Segunda.value)
-      res.innerHTML = `<p>Agendado para ${valor}. <p> Compareça portando documento de identificação (RG) ou similar.`
-    }
+      var n = document.getElementById('nome')
+        n = String(nome.value)
+      if (rad[0].checked) {
+        res.innerHTML = `<p> Sr. ${n}, Agendado para Domingo. <p> Compareça portando documento de identificação (RG) ou similar.</p></p>`
+      } else if (rad[1].checked) {
+      var res = document.getElementById('agendado')
+        res.innerHTML = `<p> Sr. ${n}, Agendado para Segunda-feira. <p> Compareça portando documento de identificação (RG) ou similar.</p></p>`
+      } else if (rad[2].checked) {
+      var res = document.getElementById('agendado')
+        res.innerHTML = `<p>Agendado para Terça-feira. <p> Compareça portando documento de identificação (RG) ou similar.</p></p>`
+      } else if (rad[3].checked) {
+        var res = document.getElementById('agendado')
+          res.innerHTML = `<p>Sr. ${n}, Agendado para Quarta-feira. <p> Compareça portando documento de identificação (RG) ou similar.</p></p>`
+      } else if (rad[4].checked) {
+        var res = document.getElementById('agendado')
+          res.innerHTML = `<p>Sr. ${n}, Agendado para Quinta-feira. <p> Compareça portando documento de identificação (RG) ou similar.</p></p>`
+      } else if (rad[5].checked) {
+        var res = document.getElementById('agendado')
+          res.innerHTML = `<p>Agendado para Sexta-feira. <p> Compareça portando documento de identificação (RG) ou similar.</p></p>`
+      } else if (rad[6].checked) {
+        var res = document.getElementById('agendado')
+          res.innerHTML = `<p>Sr. ${n}, Agendado para Sábado. <p> Compareça portando documento de identificação (RG) ou similar.</p></p>`
+      }
+  }

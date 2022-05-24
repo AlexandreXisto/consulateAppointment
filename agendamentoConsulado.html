@@ -11,21 +11,23 @@
 </head>
 <body>
     <h1>Sistema de Consulta de Nacionalidade</h1><p>
+ <p>Digite seu nome Completo:
+        <input style="font-size:15px;" type="text" id="nome" name="nome"></p>
     Digite sua Nacionalidade:
-        <input type="text" id="nacionalidade" placeholder="Digite seu páis aqui">
+        <input type="text" id="nacionalidade">
         <input type="button" id="enviar" value="Verificar" onclick="verificar()">
     <div id="res"> <!-- Local para entregar a resposta da pesquisa -->
 
     </div>
     <br>
     Agende com o consulado:
-    <p><Input type="radio" id="Domingo" value="Domingo" onclick="confirmar()">Domingo</Input>
-    <Input type="radio" id="Segunda" value="Segunda-feira" onclick="confirmar()">Segunda</Input>
-    <Input type="radio" id="Terça" value="Terça-feira" onclick="confirmar()">Terça</Input>
-    <Input type="radio" id="Quarta" value="Quarta-feira" onclick="confirmar()">Quarta</Input>
-    <Input type="radio" id="Quinta" value="Quinta-feira" onclick="confirmar()">Quinta</Input>
-    <Input type="radio" id="Sexta" value="Sexta-feira" onclick="confirmar()">Sexta</Input>
-    <Input type="radio" id="Sábado" value="Sábado" onclick="confirmar()">Sábado</Input>
+    <p><Input type="radio" name="rad" id="rad" value="Domingo" onclick="confirmar()">Domingo</Input>
+    <Input type="radio" name="rad" id="rad" value="Segunda-feira" onclick="confirmar()">Segunda</Input>
+    <Input type="radio" name="rad" id="rad" value="Terça-feira" onclick="confirmar()">Terça</Input>
+    <Input type="radio" name="rad" id="rad" value="Quarta-feira" onclick="confirmar()">Quarta</Input>
+    <Input type="radio" name="rad" id="rad" value="Quinta-feira" onclick="confirmar()">Quinta</Input>
+    <Input type="radio" name="rad" id="rad" value="Sexta-feira" onclick="confirmar()">Sexta</Input>
+    <Input type="radio" name="rad" id="rad" value="Sábado" onclick="confirmar()">Sábado</Input>
     <div id="agendado">
 
         
